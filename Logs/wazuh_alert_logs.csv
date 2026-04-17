@@ -1,0 +1,2 @@
+timestamp,agent.name,rule.description,rule.level,rule.id
+"Apr 15, 2026 @ 16:18:44.033",LapDesk-Windows,Agent event queue is flooded. Check the agent configuration.,12,204

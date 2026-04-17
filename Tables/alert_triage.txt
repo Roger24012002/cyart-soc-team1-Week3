@@ -1,0 +1,6 @@
+Alert Triage Table
+
+Alert ID | Description | Source IP | Priority | Status
+204 | Agent event queue is flooded | 192.168.152.1 | High | Open
+597 | Registry Key Entry Deleted | 192.168.152.1 | Medium | Open
+751 | Registry Value Entry Deleted | 192.168.152.1 | Medium | Open

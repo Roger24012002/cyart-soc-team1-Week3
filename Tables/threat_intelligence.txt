@@ -1,0 +1,14 @@
+Threat Intelligence Table
+
+IP Address: 192.168.152.1
+
+Source: VirusTotal
+Result: Private IP address (Internal Network)
+Reputation: Clean
+
+Source: AlienVault OTX
+Result: No results found
+Reputation: No malicious indicators
+
+Conclusion:
+The IP address belongs to an internal network and shows no signs of external threat activity.
