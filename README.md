@@ -1,84 +1,85 @@
+# CyArt SOC Team – Wazuh SIEM Security Monitoring
 
----
+## Overview
+This repository contains SOC practical work completed as part of the CyArt SOC Team tasks. The project focuses on security monitoring, alert analysis, threat intelligence, incident triage, escalation, and evidence collection using Wazuh SIEM.
+
+## Tools Used
+- Wazuh SIEM
+- Windows Endpoint Agent
+- VirusTotal
+- AlienVault OTX
+- MITRE ATT&CK
+- GitHub
+
+## Repository Structure
+cyart-soc-team1/
+├── Evidence/
+├── Logs/
+├── Reports/
+├── Screenshots/
+├── Tables/
+└── README.md
+
 
 ## Task 1: Advanced Log Analysis
-- Analyzed Wazuh logs using Threat Hunting module  
-- Identified high severity alerts (Rule ID 204 – Agent Flooding)  
-- Observed multiple system error events and alert spikes  
+Wazuh logs were analyzed using the Threat Hunting module. High severity alerts were identified, including Rule ID 204 related to agent event queue flooding.
 
 **Outcome:**  
-Detected abnormal log volume indicating possible misconfiguration or overload.
-
----
+Abnormal log volume was detected, indicating possible misconfiguration or system overload.
 
 ## Task 2: Threat Intelligence Integration
-- Investigated IP address: `192.168.152.1`  
-- Checked using VirusTotal and AlienVault OTX  
+The IP address `192.168.152.1` was checked using VirusTotal and AlienVault OTX.
 
-**Findings:**  
-- IP is a **private/local address**  
-- Not listed in threat intelligence feeds  
-
-**Conclusion:**  
-No external malicious activity detected.
-
----
+**Findings:**
+- The IP address is private/local.
+- It was not listed as malicious.
+- No external threat activity was detected.
 
 ## Task 3: Alert Triage
-- Selected alert: **Agent Event Queue Flooded (Rule ID 204)**  
-- Severity Level: **12 (High)**  
+A high severity alert was selected and analyzed.
+
+**Alert Details:**
+- Alert Name: Agent Event Queue Flooded
+- Rule ID: 204
+- Severity: High
+- Level: 12
 
 **Analysis:**  
-- High number of events generated in short time  
-- Possible agent misconfiguration or system overload  
-
-**Status:**  
-Escalated for further investigation.
-
----
+The alert was caused by a high number of events generated in a short time. This may be due to system overload or agent misconfiguration.
 
 ## Task 4: Incident Escalation
-- Escalated alert to **Tier 2 SOC Team**  
+The alert was escalated to the Tier 2 SOC Team for further investigation.
 
-**Summary:**  
-A high-severity alert was triggered due to excessive event generation from the endpoint. Initial investigation indicates system misconfiguration rather than a cyber attack. Further analysis is required to confirm root cause.
-
----
+**Escalation Summary:**  
+A high severity alert was triggered due to excessive event generation from the endpoint. Initial analysis indicates a configuration issue rather than a confirmed cyber attack.
 
 ## Task 5: Evidence Collection
-- Exported logs from Wazuh dashboard  
-- Captured screenshots of:
-  - Alerts  
-  - Threat hunting events  
-  - FIM (File Integrity Monitoring)  
-  - Dashboard overview  
+Evidence was collected and organized for documentation.
 
-**Outcome:**  
-All evidence preserved for incident documentation and analysis.
-
----
+**Evidence Includes:**
+- Wazuh alert screenshots
+- Threat hunting logs
+- FIM screenshots
+- Dashboard overview
+- Exported logs
+- Incident report
 
 ## Key Findings
-- Alert triggered due to **event flooding**
-- No malicious IP detected
-- System behavior indicates **configuration issue**
-- Proper SOC workflow followed (Detection → Triage → Escalation → Documentation)
-
----
+- High severity alert was detected in Wazuh.
+- Event flooding was observed from the endpoint.
+- Threat intelligence checks showed no malicious external IP.
+- The incident followed SOC workflow: Detection → Analysis → Triage → Escalation → Documentation.
 
 ## Conclusion
-The investigation confirmed that the alert was caused by system-level event flooding rather than a real cyber attack. The task successfully demonstrates practical SOC skills including monitoring, analysis, and incident handling using Wazuh SIEM.
-
----
+This task successfully demonstrates practical SOC analyst activities using Wazuh SIEM. The investigation showed that the alert was most likely caused by system-level event flooding or misconfiguration, not a confirmed cyber attack. The project helped in understanding alert monitoring, log analysis, threat intelligence checks, incident triage, and evidence collection.
 
 ## Future Improvements
-- Implement alert threshold tuning  
-- Improve agent configuration  
-- Integrate advanced threat intelligence feeds  
-- Automate incident response workflows  
-
----
+- Tune Wazuh alert rules and thresholds.
+- Improve endpoint agent configuration.
+- Integrate more threat intelligence sources.
+- Automate incident response workflow.
+- Add more detailed MITRE ATT&CK mapping.
 
 ## Author
 **Vinayaka Reddy**  
-Cybersecurity Enthusiast | SOC Analyst Learner  
+Cybersecurity Enthusiast | SOC Analyst Learner
