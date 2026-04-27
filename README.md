@@ -1,85 +1,212 @@
-# CyArt SOC Team – Wazuh SIEM Security Monitoring
+#  CyArt SOC Team – Week 3  
+## Advanced Security Analysis using Wazuh SIEM
 
-## Overview
-This repository contains SOC practical work completed as part of the CyArt SOC Team tasks. The project focuses on security monitoring, alert analysis, threat intelligence, incident triage, escalation, and evidence collection using Wazuh SIEM.
+---
 
-## Tools Used
-- Wazuh SIEM
-- Windows Endpoint Agent
-- VirusTotal
-- AlienVault OTX
-- MITRE ATT&CK
-- GitHub
+##  Overview
 
-## Repository Structure
-cyart-soc-team1/
+This repository contains the **Week 3 SOC Advanced Analysis Task** completed as part of the **CyArt SOC Team Program**. The project focuses on practical Security Operations Center (SOC) analyst responsibilities using **Wazuh SIEM**, including:
+
+- Advanced Log Analysis  
+- Alert Triage  
+- Threat Intelligence Validation  
+- File Integrity Monitoring (FIM)  
+- Incident Investigation  
+- Evidence Collection  
+- Security Reporting  
+
+The objective was to strengthen practical SOC skills through hands-on investigation of alerts and suspicious events in a monitored lab environment.
+
+---
+
+##  Tools & Technologies Used
+
+- Wazuh SIEM  
+- Wazuh Threat Hunting Module  
+- Windows Endpoint Agent  
+- VirusTotal  
+- AlienVault OTX  
+- File Integrity Monitoring (FIM)  
+- GitHub  
+
+---
+
+##  Repository Structure
+
+```text
+cyart-soc-team1-Week3/
 ├── Evidence/
-├── Logs/
+│   └── wazuh_alert_logs.csv
 ├── Reports/
+│   └── Week3_SOC_Report.pdf
 ├── Screenshots/
+│   ├── agent_details.png
+│   ├── agent_summary.png
+│   ├── fim_event_details.png
+│   ├── fim_events.png
+│   ├── otx_check.png
+│   ├── queue_flooded_alert.png
+│   ├── queue_flooded_events.png
+│   ├── threat_events.png
+│   ├── threat_hunting_dashboard.png
+│   ├── virustotal_check.png
+│   ├── wazuh_dashboard.png
+│   └── wazuh_login.png
 ├── Tables/
+│   ├── alert_triage.txt
+│   └── threat_intelligence.txt
 └── README.md
+````
 
+---
 
-## Task 1: Advanced Log Analysis
-Wazuh logs were analyzed using the Threat Hunting module. High severity alerts were identified, including Rule ID 204 related to agent event queue flooding.
+#  Tasks Completed
 
-**Outcome:**  
-Abnormal log volume was detected, indicating possible misconfiguration or system overload.
+---
 
-## Task 2: Threat Intelligence Integration
-The IP address `192.168.152.1` was checked using VirusTotal and AlienVault OTX.
+##  Task 1: Advanced Log Analysis
 
-**Findings:**
-- The IP address is private/local.
-- It was not listed as malicious.
-- No external threat activity was detected.
+The Wazuh Threat Hunting module was used to analyze security events and identify abnormal activity.
 
-## Task 3: Alert Triage
-A high severity alert was selected and analyzed.
+### Findings:
 
-**Alert Details:**
-- Alert Name: Agent Event Queue Flooded
-- Rule ID: 204
-- Severity: High
-- Level: 12
+* High severity alerts detected
+* Event queue flooding observed
+* Multiple alerts generated in short time period
 
-**Analysis:**  
-The alert was caused by a high number of events generated in a short time. This may be due to system overload or agent misconfiguration.
+### Outcome:
 
-## Task 4: Incident Escalation
-The alert was escalated to the Tier 2 SOC Team for further investigation.
+Potential system overload or agent logging misconfiguration identified.
 
-**Escalation Summary:**  
-A high severity alert was triggered due to excessive event generation from the endpoint. Initial analysis indicates a configuration issue rather than a confirmed cyber attack.
+---
 
-## Task 5: Evidence Collection
-Evidence was collected and organized for documentation.
+##  Task 2: Threat Intelligence Validation
 
-**Evidence Includes:**
-- Wazuh alert screenshots
-- Threat hunting logs
-- FIM screenshots
-- Dashboard overview
-- Exported logs
-- Incident report
+Suspicious IP indicators were validated using:
 
-## Key Findings
-- High severity alert was detected in Wazuh.
-- Event flooding was observed from the endpoint.
-- Threat intelligence checks showed no malicious external IP.
-- The incident followed SOC workflow: Detection → Analysis → Triage → Escalation → Documentation.
+* VirusTotal
+* AlienVault OTX
 
-## Conclusion
-This task successfully demonstrates practical SOC analyst activities using Wazuh SIEM. The investigation showed that the alert was most likely caused by system-level event flooding or misconfiguration, not a confirmed cyber attack. The project helped in understanding alert monitoring, log analysis, threat intelligence checks, incident triage, and evidence collection.
+### Findings:
 
-## Future Improvements
-- Tune Wazuh alert rules and thresholds.
-- Improve endpoint agent configuration.
-- Integrate more threat intelligence sources.
-- Automate incident response workflow.
-- Add more detailed MITRE ATT&CK mapping.
+* Checked IP reputation successfully
+* No confirmed malicious external threat detected
+* Private/local network indicators identified
 
-## Author
-**Vinayaka Reddy**  
-Cybersecurity Enthusiast | SOC Analyst Learner
+---
+
+##  Task 3: Alert Triage
+
+A high severity alert was selected and investigated.
+
+### Alert Details
+
+| Field      | Value                     |
+| ---------- | ------------------------- |
+| Alert Name | Agent Event Queue Flooded |
+| Rule ID    | 204                       |
+| Severity   | High                      |
+| Level      | 12                        |
+
+### Analysis:
+
+The endpoint generated a large number of events rapidly, likely due to logging noise or configuration issues.
+
+---
+
+##  Task 4: File Integrity Monitoring (FIM)
+
+Wazuh FIM module was reviewed to monitor file changes and suspicious modifications.
+
+### Outcome:
+
+* File change events successfully logged
+* File monitoring visibility confirmed
+* Useful for insider threat and malware detection
+
+---
+
+##  Task 5: Incident Investigation & Evidence Collection
+
+Evidence collected and documented:
+
+* Dashboard screenshots
+* Threat Hunting logs
+* Alert details
+* FIM events
+* Exported CSV logs
+* Final report documentation
+
+---
+
+#  Key Findings
+
+* High severity alerts successfully detected
+* Queue flooding events analyzed
+* Threat intelligence checks completed
+* File monitoring evidence reviewed
+* SOC workflow executed successfully:
+
+**Detection → Analysis → Triage → Investigation → Documentation**
+
+---
+
+#  Skills Demonstrated
+
+* SIEM Monitoring
+* Log Analysis
+* Threat Hunting
+* Alert Triage
+* Threat Intelligence Validation
+* Incident Investigation
+* FIM Monitoring
+* SOC Reporting
+
+---
+
+#  Screenshots Included
+
+* Wazuh Login Panel
+* Dashboard Overview
+* Threat Hunting Dashboard
+* Queue Flooded Alert
+* FIM Events
+* VirusTotal Check
+* OTX Intelligence Check
+* Agent Details
+
+---
+
+#  Conclusion
+
+This Week 3 project successfully demonstrates advanced SOC analyst activities using **Wazuh SIEM**. Alerts were monitored, suspicious activity was investigated, threat intelligence checks were performed, and evidence was documented professionally.
+
+The project provided strong practical exposure to:
+
+* Real-time Alert Monitoring
+* Incident Investigation
+* Threat Intelligence Usage
+* File Integrity Monitoring
+* Security Documentation
+
+This hands-on work reflects practical SOC operations used in enterprise environments.
+
+---
+
+#  Future Improvements
+
+* Tune noisy alert rules
+* Improve endpoint log filtering
+* Add automated response playbooks
+* Expand MITRE ATT&CK mapping
+* Integrate additional intelligence feeds
+
+---
+
+# 👨‍💻 Author
+
+**Vinayaka Reddy**
+Cybersecurity Enthusiast | SOC Analyst Learner | SIEM | Threat Hunting | Incident Response
+
+```
+```
